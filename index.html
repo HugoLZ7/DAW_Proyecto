@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard Empresarial</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <nav class="navbar navbar-dark bg-dark px-3">
@@ -13,45 +13,94 @@
   </nav>
 
   <div class="container mt-4">
+    <!-- Indicadores -->
     <div class="row text-center mb-4">
       <div class="col-md-3">
         <div class="card p-3">
-          <h5>Campañas</h5>
-          <p class="text-success">9,184</p>
+          <h6>Campañas Enviadas</h6>
+          <p class="text-success fs-5">9,184</p>
         </div>
       </div>
       <div class="col-md-3">
         <div class="card p-3">
-          <h5>Nuevos Leads</h5>
-          <p class="text-danger">3,254</p>
+          <h6>Nuevos Leads</h6>
+          <p class="text-danger fs-5">3,254</p>
         </div>
       </div>
       <div class="col-md-3">
         <div class="card p-3">
-          <h5>Negocios</h5>
-          <p class="text-success">861</p>
+          <h6>Negocios Cerrados</h6>
+          <p class="text-success fs-5">861</p>
         </div>
       </div>
       <div class="col-md-3">
         <div class="card p-3">
-          <h5>Ingresos</h5>
-          <p class="text-success">$253k</p>
+          <h6>Ingresos Totales</h6>
+          <p class="text-success fs-5">$253k</p>
         </div>
       </div>
     </div>
 
+    <!-- Gráfico de Ingresos -->
     <div class="row mb-4">
-      <div class="col-12">
-        <div class="card p-4">
-          <h5 class="mb-3">Ingresos Mensuales</h5>
+      <div class="col-md-8">
+        <div class="card p-3">
+          <h5>Ingresos Mensuales</h5>
           <canvas id="revenueChart" height="100"></canvas>
+        </div>
+      </div>
+
+      <!-- Gráfico Circular -->
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h5>Campañas</h5>
+          <canvas id="campaignChart" height="200"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tablas -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="card p-3">
+          <h5>Top Performing</h5>
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th>Usuario</th>
+                <th>Leads</th>
+                <th>Negocios</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Jeremy Young</td><td>187</td><td>154</td></tr>
+              <tr><td>Tamara Reyes</td><td>162</td><td>142</td></tr>
+              <tr><td>Louis Price</td><td>143</td><td>132</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card p-3">
+          <h5>Leads Recientes</h5>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Risa Pearson <span class="badge bg-warning">Cold Lead</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Margaret D. Evans <span class="badge bg-danger">Lost Lead</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Isaac Campbell <span class="badge bg-success">Converted</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
 
-  <script src="/libs/chart.min.js"></script>
-  <script src="/js/chart.js"></script>
-  <script src="/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/charts.js"></script>
 </body>
 </html>
