@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard de Empleados</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">DASHBOARD</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" aria-current="page" href="/index.html">HOME</a>
+              <a class="nav-link active" href="/empleados.html">EMPLOYES</a>
+              <a class="nav-link" href="#">BRANCHES</a>
+             
+            </div>
+          </div>
+        </div>
+      </nav>
+
+  <div class="container mt-4">
+
+    <!-- KPIs -->
+    <div class="row text-center mb-4">
+      <div class="col-md-3">
+        <div class="card p-3">
+          <h6>Total Empleados</h6>
+          <p class="text-success fs-5" id="totalEmpleados">0</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-3">
+          <h6>Proyectos Activos</h6>
+          <p class="text-primary fs-5">34</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-3">
+          <h6>Empleados en Meta</h6>
+          <p class="text-success fs-5">18</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-3">
+          <h6>Horas Totales</h6>
+          <p class="text-info fs-5">1,235</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart -->
+    <div class="row mb-4">
+      <div class="col-md-8">
+        <div class="card p-3">
+          <h5>Rendimiento por Empleado</h5>
+          <canvas id="performanceChart" height="350"></canvas>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h5>Distribución</h5>
+          <canvas id="donutChart" height="200"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tablas -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="card p-3">
+          <h5>Top Performing</h5>
+          <table class="table table-sm  table-dark table-striped table-hover">
+            <thead>
+              <tr><th>Empleado</th><th>Proyectos</th><th>Puntaje</th></tr>
+            </thead>
+            <tbody id="rankingTable"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card p-3">
+          <h5>Empleados Recientes</h5>
+          <ul class="list-group" id="recentList">
+            <!-- JS inserta aquí -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/js/empleado.js"></script>
+</body>
+</html>

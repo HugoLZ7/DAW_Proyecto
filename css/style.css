@@ -1,9 +1,14 @@
 body {
-    background-color: #f8f9fa;
+    background-image: url(/img/fondo.jpg);
   }
   .card {
     border: none;
     border-radius: 0.75rem;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   }
-  
+.nav-link:hover {
+  background-color: #495057;  /* fondo gris oscuro */
+  color: white;               /* texto blanco */
+  text-decoration: none;      /* quitar subrayado */
+  transition: background-color 0.3s ease;
+}
