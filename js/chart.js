@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     new Chart(campaignCtx, {
       type: "doughnut",
       data: {
-        labels: ["Enviadas", "Alcanzadas", "Abiertas"],
+        labels: ["Suc. Santa Elena", "Suc.Alameda", "Suc.Mascota"],
         datasets: [{
           data: [6510, 3487, 1568],
           backgroundColor: ["#ffc107", "#007bff", "#28a745"],
