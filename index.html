@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard Empresarial</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">DASHBOARD</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="/index.html">HOME</a>
-              <a class="nav-link" href="/empleados.html">EMPLOYES</a>
-              <a class="nav-link" href="#">BRANCHES</a>
-             
-            </div>
-          </div>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">DASHBOARD</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+          <a class="nav-link" href="empleados.html">EMPLOYES</a>
+          <a class="nav-link" href="branches.html">BRANCHES</a>
         </div>
-      </nav>
+      </div>
+    </div>
+  </nav>
 
   <div class="container mt-4">
     <!-- Indicadores -->
@@ -52,6 +59,11 @@
           <p class="text-success fs-5">$253k</p>
         </div>
       </div>
+    </div>
+
+    <!-- Botón exportar JSON -->
+    <div class="text-end mb-3">
+      <button id="exportDashboardBtn" class="btn btn-outline-primary">Exportar Datos JSON</button>
     </div>
 
     <!-- Gráfico de Ingresos -->
@@ -86,7 +98,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr class="table-success"><td >Jeremy Young</td><td>187</td><td>154</td></tr>
+              <tr class="table-success"><td>Jeremy Young</td><td>187</td><td>154</td></tr>
               <tr><td>Tamara Reyes</td><td>162</td><td>142</td></tr>
               <tr><td>Louis Price</td><td>143</td><td>132</td></tr>
               <tr><td>Louis Price</td><td>143</td><td>132</td></tr>
@@ -109,8 +121,8 @@
               Isaac Campbell <span class="badge bg-success">Converted</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
-                Isaac Campbell <span class="badge bg-success">Converted</span>
-              </li>
+              Isaac Campbell <span class="badge bg-success">Converted</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -118,6 +130,15 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="/js/chart.js"></script>
+  <script src="js/chart.js"></script>
+  <script>
+    document.getElementById('exportDashboardBtn').addEventListener('click', () => {
+      if (typeof exportDashboardData === 'function') {
+        exportDashboardData();
+      } else {
+        alert('Función de exportación no definida.');
+      }
+    });
+  </script>
 </body>
 </html>
