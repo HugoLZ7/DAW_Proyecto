@@ -5,29 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dashboard de Empleados</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">DASHBOARD</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link" aria-current="page" href="/index.html">HOME</a>
-              <a class="nav-link active" href="/empleados.html">EMPLOYES</a>
-              <a class="nav-link" href="#">BRANCHES</a>
-             
-            </div>
-          </div>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">DASHBOARD</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="index.html">HOME</a>
+          <a class="nav-link active" href="empleados.html">EMPLOYES</a>
+          <a class="nav-link" href="branches.html">BRANCHES</a>
         </div>
-      </nav>
+      </div>
+    </div>
+  </nav>
 
   <div class="container mt-4">
-
     <!-- KPIs -->
     <div class="row text-center mb-4">
       <div class="col-md-3">
@@ -56,7 +53,18 @@
       </div>
     </div>
 
-    <!-- Chart -->
+    <!-- Botón exportar JSON -->
+    <div class="text-end mb-3">
+      <button id="exportEmpleadosBtn" class="btn btn-outline-primary">Exportar Empleados JSON</button>
+    </div>
+
+    <!-- Lista de empleados -->
+    <div class="card p-3 mb-4">
+      <h5>Lista de Empleados</h5>
+      <ul class="list-group" id="empleadosList"></ul>
+    </div>
+
+    <!-- Charts -->
     <div class="row mb-4">
       <div class="col-md-8">
         <div class="card p-3">
@@ -72,34 +80,9 @@
         </div>
       </div>
     </div>
-
-    <!-- Tablas -->
-    <div class="row mb-4">
-      <div class="col-md-6">
-        <div class="card p-3">
-          <h5>Top Performing</h5>
-          <table class="table table-sm  table-dark table-striped table-hover">
-            <thead>
-              <tr><th>Empleado</th><th>Proyectos</th><th>Puntaje</th></tr>
-            </thead>
-            <tbody id="rankingTable"></tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card p-3">
-          <h5>Empleados Recientes</h5>
-          <ul class="list-group" id="recentList">
-            <!-- JS inserta aquí -->
-          </ul>
-        </div>
-      </div>
-    </div>
-
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="/js/empleado.js"></script>
+ <script src="js/empleado.js"></script>
 </body>
 </html>
