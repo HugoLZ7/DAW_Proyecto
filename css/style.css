@@ -12,3 +12,32 @@ body {
   text-decoration: none;      /* quitar subrayado */
   transition: background-color 0.3s ease;
 }
+ .login-container {
+      max-width: 900px;
+      margin: 50px auto;
+      background-color: #2e2e2e;
+      color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    .login-form {
+      padding: 40px;
+    }
+    .form-control {
+      background-color: #444;
+      color: white;
+      border: none;
+    }
+    .form-control::placeholder {
+      color: #ccc;
+    }
+    .btn-login {
+      width: 100%;
+      background-color: #111;
+      color: white;
+    }
+    .left-image {
+      background: url('https://via.placeholder.com/400x500') center center no-repeat;
+      background-size: cover;
+    }
