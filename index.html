@@ -38,25 +38,25 @@
       <div class="col-md-3">
         <div class="card p-3">
           <h6>Ventas totales realizadas</h6>
-          <p class="text-success fs-5">$10,184</p>
+          <p id="ventasTotales" class="text-success fs-5">$10,184</p>
         </div>
       </div>
       <div class="col-md-3">
         <div class="card p-3">
           <h6>Empleados Totales</h6>
-          <p class="text-danger fs-5">5,254</p>
+          <p id="empleadosTotales" class="text-danger fs-5">5,254</p>
         </div>
       </div>
       <div class="col-md-3">
         <div class="card p-3">
           <h6>Sucursales Totales</h6>
-          <p class="text-success fs-5">86</p>
+          <p id="sucursalesTotales" class="text-success fs-5">86</p>
         </div>
       </div>
       <div class="col-md-3">
         <div class="card p-3">
           <h6>Ganancias Totales</h6>
-          <p class="text-success fs-5">$253k</p>
+          <p id="gananciasTotales" class="text-success fs-5">$253k</p>
         </div>
       </div>
     </div>
@@ -64,8 +64,10 @@
     <!-- Botón exportar JSON -->
     <div class="container-fluid mb-3">
       <button id="exportDashboardBtn" class="btn btn-outline-light w-100">Exportar Datos JSON</button>
+    
     </div>
-
+    
+    <div class="container-fluid mb-3"><input type="file" id="inputJSONFinanzas" class="form-control" accept=".json" /></div>
     <!-- Gráfico de Ingresos -->
     <div class="row mb-4">
       <div class="col-md-8">
